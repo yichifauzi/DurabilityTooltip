@@ -14,7 +14,7 @@ public class DurabilityTooltip {
     public static final String MODID = "durabilitytooltip";
     public static final String NAME = "Durability Tooltip";
     public static final String VERSION = "1.1.4";
-    public static final String DEPENDENCIES = "required-after:supermartijn642configlib@[1.1.6,)";
+    public static final String DEPENDENCIES = "required-after:supermartijn642configlib@@config_library_dependency@";
     public static Logger LOGGER = LogManager.getLogger("durabilitytooltip");
 
     public DurabilityTooltip(){
