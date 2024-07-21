@@ -1,8 +1,6 @@
 package com.supermartijn642.durabilitytooltip;
 
-import net.neoforged.fml.IExtensionPoint;
 import net.neoforged.fml.ModList;
-import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +14,6 @@ public class DurabilityTooltip {
     public static Logger LOGGER = LoggerFactory.getLogger("durabilitytooltip");
 
     public DurabilityTooltip(){
-        ModLoadingContext.get().registerExtensionPoint(IExtensionPoint.DisplayTest.class, () -> new IExtensionPoint.DisplayTest(() -> IExtensionPoint.DisplayTest.IGNORESERVERONLY, (a, b) -> b));
         if(ModList.get().isLoaded("supermartijn642configlib"))
             DurabilityTooltipConfig.init();
     }
