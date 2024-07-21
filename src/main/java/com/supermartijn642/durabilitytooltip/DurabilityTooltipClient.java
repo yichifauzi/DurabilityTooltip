@@ -47,7 +47,7 @@ public class DurabilityTooltipClient implements ClientModInitializer {
         return blackListedMods.contains(owningMod);
     }
 
-    public static void onItemTooltip(ItemStack stack, TooltipFlag flag, List<Component> lines){
+    public static void onItemTooltip(ItemStack stack, Item.TooltipContext context, TooltipFlag flag, List<Component> lines){
         if((!DurabilityTooltipConfig.onlyVanillaTools.get() || BuiltInRegistries.ITEM.getKey(stack.getItem()).getNamespace().equals("minecraft"))
             && !isBlackListed(stack.getItem())
             && (DurabilityTooltipConfig.showWhenFull.get() || stack.isDamaged())
